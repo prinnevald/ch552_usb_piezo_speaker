@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.rel
+*.ihx
+*.bin
+build/
+.ch552_audio_backup/
+.ch552_audio_v7_backup/
+.DS_Store
