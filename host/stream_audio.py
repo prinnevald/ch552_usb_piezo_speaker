@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""CH552 v8 USB-CDC bit-packed PDM streamer, with host-side noise shaping.
+"""CH552 USB-CDC bit-packed PDM streamer (preferred: first-order).
 
 USB protocol: 8000 BYTES/s, each byte has 8 PDM bits (MSB-first), for a
 64,000 bits/s GPIO waveform. NOT compatible with older 8-bit PCM firmware.
+Default: bright-wide profile and first-order shaping (subjectively less harsh
+than second-order on the tested electromagnetic buzzer).
 """
 import argparse
 from array import array

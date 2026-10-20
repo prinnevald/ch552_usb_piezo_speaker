@@ -1,20 +1,17 @@
 # Third-party notices
 
-This repository is an **overlay** on
-[**tadakado/ch552-dongle**](https://github.com/tadakado/ch552-dongle),
-a CH552 USB firmware project by **Tadashi** (`tadakado`). Its original
-copyright notice is **Copyright (c) 2026 Tadashi** and its license is **MIT**.
+This repository is an independent code overlay for
+[Tadashi's `tadakado/ch552-dongle`](https://github.com/tadakado/ch552-dongle).
+The upstream work is MIT licensed and identifies its copyright holder as:
 
-The original USB CDC stack, supporting includes, system initialization,
-SDCC build system and flashing utilities are **not included** in this overlay.
-Users clone the upstream project separately. The overlay replaces/adapts
-several files in that checkout, and modifies USB configuration descriptors
-and related interface validation to expose CDC without a keyboard.
+> Copyright (c) 2026 Tadashi
 
-The bundled LICENSE retains the upstream notice and MIT license text.
-An upstream checkout's README and LICENSE are left in place by the installer.
-Refer also to the upstream README for acknowledgments of other influences.
+The upstream USB CDC implementation, USB descriptors, system initialization,
+CH552 headers and SDCC build environment are **not copied into this repository**.
+Users obtain those files by cloning the upstream project, retaining its LICENSE
+and README. The overlay installer patches selected files and adds original audio
+playback sources and a host-side audio processor. The upstream LICENSE is never
+overwritten by the installer. See this repository's LICENSE for the overlay.
 
-This project's original additions are the audio receiving loop, the 8 kHz audio processing pipeline, 64 kHz host-side first- and
-second-order PDM bitstream generation, MCU packed-bit output, PC audio
-filtering/streaming and English installation documentation. This is **not an official upstream release**.
+**Not affiliated with or endorsed by Tadashi.** Please cite and link the
+original project when redistributing a patched firmware tree.
